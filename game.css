@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#game{
+    height: 70%;
+    width: 60%;
+    background-image: url('./assets/boxBackgroud.png');
+    border: 1px solid black;
+    margin: 15vh auto;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+#blockTop{
+    width: 1.1rem;
+    height: 10vh;
+    background-color: #fbcb0a;
+    /* border: 2px solid black; */
+    position: relative;
+    left: 62%;
+    animation: block  4.5s linear  infinite  ;
+}
+
+#blockBottom{
+    width: 1.1rem;
+    /* height: 24vh; */
+    background-color: #fbcb0a;
+    /* border: 2px solid black; */
+    position: absolute;
+    bottom: 0vh;
+    left: 62%;
+    animation: block  4.5s linear  infinite  ;
+}
+
+@keyframes block {
+    0%{
+        left:60%;
+    }
+    100%{
+        left: -5%;
+    }
+    
+}
+
+
+#hole{
+    height: 8rem;
+    width: 1.1rem;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    /* border: 2px solid black; */
+    left: 62%;
+    top: 10vh;
+    animation: block  4.5s linear   infinite  ;
+}
+
+#bird{
+    position: absolute;
+    top: 26%;
+    /* border: 2px solid black; */
+    height: 2rem;
+    width: 2rem;
+}
+
+
+#bird img{
+    height: 4vh;
+    width: 4vh;
+}
+
+
+#result{
+    height: 43vh;
+    width: 90%;
+    background-color: #d90084;
+    margin: 10vh auto 0;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: block; 
+    text-align: center;
+
+}
+#btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: green;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    cursor: pointer;
+
+}
+#text{
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: seashell;
+}
+
+
+@media (min-width: 320px) {
+    #game{
+        height: 43vh;
+        width: 90%;
+        border: 1px solid black;
+        margin: 2% auto 0;
+    }
+
+    #bird{
+        position: absolute;
+        top: 23%;
+        /* border: 2px solid black; */
+        height: 2rem;
+        width: 2rem;
+        /* background-color: #ffff9b; */
+    }
+
+    #result{
+        height: 30vh;
+        width: 90%;
+}
+
+}
+
+
+
+@media (min-width: 768px) {
+    #game{
+        height: 50vh;
+        width: 80%;
+        left: 3%;
+        border: 1px solid black;
+        margin: 15vh auto 0;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1080px) {
+    #game{
+        height: 50vh;
+        width: 80%;
+        position: relative;
+        top: -5%;
+        border: 1px solid black;
+        margin: 15vh auto 0;
+        overflow: hidden;
+    }
+
+    #result{
+        height: 45%;
+        width: 65%;
+        position: relative;
+        top: 18%;
+        left: -4%;
+    }
+}
